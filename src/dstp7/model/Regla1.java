@@ -37,6 +37,11 @@ public class Regla1 implements IRegla{
             {
                 descuento += productoDescuento.getPrecio() * porcentaje * 2;
             }
+
+          /*  else if (productoDescuento.tieneCantidad(4))
+            {
+
+            } */
         }
         return descuento;
     }

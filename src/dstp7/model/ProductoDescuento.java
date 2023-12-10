@@ -6,7 +6,7 @@ public class ProductoDescuento {
         this.cantidad = cantidad;
     }
 
-    private Producto producto;
+    private Producto producto; // visibilidad por atributo a la clase Producto
     private int cantidad;
 
     public Producto getProducto() {
@@ -23,6 +23,7 @@ public class ProductoDescuento {
 
     public void sumarCantidad(int cantidad){
         this.cantidad += cantidad;
+
     }
 
     public boolean tieneProducto(Producto producto){

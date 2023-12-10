@@ -1,10 +1,6 @@
 package UnitTests;
 
 import dstp7.model.Producto;
-import dstp7.model.Regla1;
-import dstp7.model.Regla2;
-import dstp7.model.Regla3;
-import dstp7.model.Regla4;
 import dstp7.model.Rubro;
 
 public class Repositorio {
@@ -28,6 +24,7 @@ public class Repositorio {
         rubros[1] = new Rubro(2, "Lacteos");
         rubros[2] = new Rubro(2, "Verduras");
         rubros[3] = new Rubro(2, "Limpieza");
+       // rubros[4] = new Rubro(3, "Bebidas");
     }
     
     private static void crearProductos(){
@@ -38,5 +35,6 @@ public class Repositorio {
         productos[4] = new Producto(5, "Repollo", 80, rubros[2]);
         productos[5] = new Producto(6, "Detergente", 15, rubros[3]);
         productos[6] = new Producto(7, "Pan Francés", 28, rubros[0]);
+     //   productos[7] = new Producto(8, "Caja de Sidra", 4000, rubros[4]);
     }
 }

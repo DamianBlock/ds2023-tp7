@@ -11,27 +11,45 @@ public class Regla3 implements IRegla{
         @Override
         public double calcularDescuento(Venta venta){
             double descuento = 0;
+
             ArrayList<ProductoDescuento> productos = new ArrayList<>();
+
             for (LineaVenta detalle : venta.getDetalle()) {
+
                 if (detalle.tieneRubro(rubro1) || detalle.tieneRubro(rubro2)) {
+                    System.out.println("El descuento para producto es : " + detalle.tieneRubro(rubro2) + " " +  detalle.tieneRubro(rubro1));
+
                     boolean existe = false;
+
+                    System.out.println("El producto es : " + existe);
+
                     for (ProductoDescuento productoDescuento : productos) {
+
+
                         if (productoDescuento.tieneProducto(detalle.getProducto())) {
+                            System.out.println("El descuento para producto es : " +productoDescuento.tieneProducto(detalle.getProducto()));
+
                             existe = true;
                             productoDescuento.sumarCantidad(detalle.getCantidad());
+                            System.out.println("El producto es : " + existe);
+
                             break;
                         }
+
                     }
                     if (existe) {
                         productos.add(new ProductoDescuento(detalle.getProducto(), detalle.getCantidad()));
+
                     }
                 }
             }
 
+
             for(ProductoDescuento productoDescuento : productos)
             {
                 if(productoDescuento.tieneCantidadEntre(2,5))
-                    descuento += productoDescuento.getPrecio() * (productoDescuento.getCantidad() - 1) * porcentaje;
+                    descuento += (productoDescuento.getPrecio() * (productoDescuento.getCantidad() - 1)) * porcentaje;
+
             }
             return descuento;
         }

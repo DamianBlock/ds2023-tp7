@@ -9,7 +9,7 @@ public class LineaVenta {
       }
 
       private int cantidad;
-      private Producto producto;
+      private Producto producto;  // visibilidad por atributo a la clase Producto
       private double precio;
 
       public boolean tieneRubro(Rubro rubro){

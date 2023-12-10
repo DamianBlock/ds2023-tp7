@@ -14,7 +14,7 @@ public class Producto {
         private int codigo;
         private String descripcion;
         private double precio;
-        private Rubro rubro;         // visibilidad por atributo
+        private Rubro rubro;         // visibilidad por atributo a la clase Rubro
 
     public boolean tieneRubro(Rubro rubro) {
         return this.rubro.equals(rubro);
