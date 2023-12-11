@@ -4,10 +4,16 @@ public class Regla3 implements IRegla{
         private static final double porcentaje = 0.3d;
         private final Rubro rubro1;
         private final Rubro rubro2;
-        public Regla3(Rubro rubro1, Rubro rubro2){
-            this.rubro1 = rubro1;
-            this.rubro2 = rubro2;
-        }
+
+    public Regla3(Rubro rubro1, Rubro rubro2) {
+        this.rubro1 = rubro1;
+        this.rubro2 = rubro2;
+    }
+
+    /*public Regla3(Rubro rubro1, Rubro rubro2){
+        this.rubro1 = rubro1;
+        this.rubro2 = rubro2;
+    }*/
         @Override
         public double calcularDescuento(Venta venta){
             double descuento = 0;
@@ -31,7 +37,7 @@ public class Regla3 implements IRegla{
 
                             existe = true;
                             productoDescuento.sumarCantidad(detalle.getCantidad());
-                            System.out.println("El producto es : " + existe);
+                            System.out.println("El producto se comprueba : " + existe);
 
                             break;
                         }
@@ -49,7 +55,7 @@ public class Regla3 implements IRegla{
             {
                 if(productoDescuento.tieneCantidadEntre(2,5))
                     descuento += (productoDescuento.getPrecio() * (productoDescuento.getCantidad() - 1)) * porcentaje;
-
+                System.out.println("El descuento hasta acá es : %" + descuento);
             }
             return descuento;
         }

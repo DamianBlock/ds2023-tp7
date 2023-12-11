@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Regla4 implements IRegla{
         private static final double porcentaje = 0.1d;
 
-    public Regla4(Rubro rubro1, Rubro rubro2, Rubro rubro3, Rubro rubro4) {
+    public Regla4(Rubro rubro1, Rubro rubro2, Rubro rubro3, Rubro rubro4) {             // agregamos al constructor todos los rubros
     }
 
     @Override
