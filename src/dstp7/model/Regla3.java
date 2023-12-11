@@ -23,7 +23,7 @@ public class Regla3 implements IRegla{
             for (LineaVenta detalle : venta.getDetalle()) {
 
                 if (detalle.tieneRubro(rubro1) || detalle.tieneRubro(rubro2)) {
-                    System.out.println("El descuento para producto es : " + detalle.tieneRubro(rubro2) + " " +  detalle.tieneRubro(rubro1));
+                    System.out.println("El descuento para producto es : " + detalle.tieneRubro(rubro1) + " " +  detalle.tieneRubro(rubro2));
 
                     boolean existe = false;
 
@@ -33,7 +33,7 @@ public class Regla3 implements IRegla{
 
 
                         if (productoDescuento.tieneProducto(detalle.getProducto())) {
-                            System.out.println("El descuento para producto es : " +productoDescuento.tieneProducto(detalle.getProducto()));
+                            System.out.println("El descuento para producto es : " + productoDescuento.tieneProducto(detalle.getProducto()));
 
                             existe = true;
                             productoDescuento.sumarCantidad(detalle.getCantidad());
