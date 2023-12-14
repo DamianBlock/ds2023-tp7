@@ -27,7 +27,23 @@ public class Regla3Tests {
         System.out.println("El descuento es : %" + descuento);
         assertEquals(30, descuento, 0);
 
+    }
 
+    @Test
+    public void siLlevaUnaUnidadDeDiferentesProductoDeCualquierRubroNoTieneDescuento() {
+        //Datos o definiciones
+        Regla3 regla = new Regla3(Repositorio.getRubros()[0], Repositorio.getRubros()[1]);      // Traemos tanto el rubro de lacteos como de verdulería
+        Venta venta = new Venta();
+        venta.agregarDetalle(Repositorio.getProductos()[1], 1);
+        venta.agregarDetalle(Repositorio.getProductos()[2], 1);
+
+        //Ejecucion
+        double descuento = regla.calcularDescuento(venta);
+
+
+        //Comparación
+        System.out.println("El descuento es : %" + descuento);
+        assertEquals(0, descuento, 0);
     }
 }
 
